@@ -46,29 +46,29 @@
 <p id="cdown"></p>
 
 <script>
-// Set the date we're counting down to
+// Ορισμός της ημερομηνίας που χρονομετρούμε
 var countDownDate = new Date("Mar 8, 2020 0:00:01").getTime();
 
-// Update the count down every 1 second
+// Ανανεωση ανα δευτερόλεπτο
 var x = setInterval(function() {
 
-  // Get today's date and time
+  // Ληψη τωρινού χρόνου
   var now = new Date().getTime();
     
-  // Find the distance between now and the count down date
+  // Ευρεση διαφοράς χρόνου
   var distance = countDownDate - now;
     
-  // Time calculations for days, hours, minutes and seconds
+  // Υπολογισμοί χρόνου
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-  // Output the result in an element with id="demo"
+  // Προβολή αποτελέσματος
   document.getElementById("cdown").innerHTML = days + "M " + hours + "Ω "
   + minutes + "Λ " + seconds + "Δ ";
     
-  // If the count down is over, write some text 
+  // Εμφάνηση μυνηματος μετα τη ληξη 
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("cdown").innerHTML = "Η διανομη του βιβλίου ξεκινα.. επιστρέψετε σε λιγα λεπτά";
